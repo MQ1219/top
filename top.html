@@ -40,7 +40,10 @@
 	let ttop = document.querySelector(".ttop");
 	ttop.style.display = "none";
 	window.onscroll = function(){
-		if(window.scrollY>100){
+		var scrollTop = document.documentElement.
+		scollTop ||document.body.scrollTop || window.
+		scrollY || window.pageYOffset
+		if(scrollTop>100){
 			ttop.style.display="block";
 		}else{
 			ttop.style.display="none";
@@ -49,5 +52,4 @@
 	ttop.onclick = function(){
 		window.scrollTo(0,0);
 	}
-
 </script>
